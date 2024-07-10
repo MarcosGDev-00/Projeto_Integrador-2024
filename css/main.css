@@ -1240,7 +1240,15 @@ div.redes_footer > div.icon i {
   .text_reads h1,
   div.text_process h1,
   div.container-team h1 {
-    font-size: 3rem;
+    font-size: 28px;
+  }
+
+  * {
+    font-size: 16px;
+  }
+
+  div.btn {
+    padding: 3px 0px;
   }
 
   section.container {
@@ -1329,6 +1337,10 @@ div.redes_footer > div.icon i {
   div.process_sobre {
     flex-direction: column;
     height: 100%;
+  }
+
+  div#progress-bar-container li .step-inner {
+    display: none;
   }
 
   /* Contato */
