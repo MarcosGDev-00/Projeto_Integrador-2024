@@ -1231,6 +1231,37 @@ div.redes_footer > div.icon i {
   background-color: var(--c2);
 }
 
+[vw] [vw-access-button] {
+  display: none;
+  flex-direction: row-reverse;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  transition: all .5s ease;
+  right: 0;
+  left: auto;
+  border-radius: 50px!important;
+}
+
+[vw] [vw-access-button] .access-button {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 50px!important;
+}
+
+[vw] [vw-access-button] .pop-up {
+  position: absolute;
+  height: 40px;
+  min-width: 150px;
+  z-index: 0;
+  left: 0;
+  right: auto;
+  border-radius: 50px!important;
+}
+
 /* Responsiveness for cell phone screens */
 @media screen and (max-width: 768px) {
   div.text_initial h1,
