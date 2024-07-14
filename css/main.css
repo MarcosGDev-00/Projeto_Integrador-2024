@@ -641,6 +641,8 @@ div.slider .list .item:nth-child(1) .content .type {
 
 div.slider .list .item:nth-child(1) .content .description {
   animation-delay: 0.8s !important;
+  text-align: left;
+  padding-right: 20px;
 }
 
 div.slider .list .item:nth-child(1) .content .buttons {
@@ -933,7 +935,7 @@ div.process_sobre {
 
 div.text_process {
   float: left;
-  max-width: 100%;
+  max-width: 50%;
 }
 
 div.text_process h1 {
@@ -946,13 +948,57 @@ div.img_process {
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
 }
 
-div.img_process img {
-  width: 80%;
-  height: 80%;
+.swiper-container {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -50%;
+  top: 0%;
+}
+
+div.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-container .swiper-slide .imgBox {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-container .swiper-slide .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.swiper-container .swiper-slide .contentBox {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: var(--fundo1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.swiper-container .swiper-slide .contentBox h2 {
+  font-size: 20px;
+}
+
+.swiper-container .swiper-slide .contentBox span {
+  font-size: 16px;
+  color: var(--cor3);
 }
 
 div.process-wrapper {
@@ -1114,6 +1160,126 @@ div#progress-bar-container #line-progress {
   }
 }
 
+/* Gestão */
+div.slide-container {
+  max-width: 85%;
+  width: 100%;
+  padding: 40px 0;
+}
+
+div.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+div.card {
+  border-radius: 25px;
+  background-color: var(--fundo1);
+}
+
+div.image-content,
+div.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+div.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+span.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--cor9);
+  border-radius: 25px 25px 0 25px;
+}
+
+span.overlay::before,
+span.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--cor9);
+}
+
+span.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: var(--fundo1);
+}
+
+div.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: var(--fundo1);
+  padding: 3px;
+}
+
+div.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(cor9);
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  text-align: center;
+}
+
+div.swiper-navBtn {
+  color: var(--cor2);
+  transition: color 0.3s ease;
+}
+
+div.swiper-navBtn:hover {
+  color: var(--cor9);
+}
+
+div.swiper-navBtn::before,
+div.swiper-navBtn::after {
+  font-size: 35px;
+}
+
+div.swiper-button-next {
+  right: 0;
+}
+
+div.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-pagination span {
+  background-color: var(--cor9);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--cor9);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--cor2);
+}
+
 /* Contato */
 div.team {
   max-width: 100%;
@@ -1239,17 +1405,17 @@ div.redes_footer > div.icon i {
   cursor: pointer;
   overflow: hidden;
   position: absolute;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   right: 0;
   left: auto;
-  border-radius: 50px!important;
+  border-radius: 50px !important;
 }
 
 [vw] [vw-access-button] .access-button {
   width: 40px;
   height: 40px;
   z-index: 1;
-  border-radius: 50px!important;
+  border-radius: 50px !important;
 }
 
 [vw] [vw-access-button] .pop-up {
@@ -1259,7 +1425,7 @@ div.redes_footer > div.icon i {
   z-index: 0;
   left: 0;
   right: auto;
-  border-radius: 50px!important;
+  border-radius: 50px !important;
 }
 
 /* Responsiveness for cell phone screens */
@@ -1481,7 +1647,6 @@ div.redes_footer > div.icon i {
   div.img_process {
     display: none;
   }
-
 
   /* Contato */
   div.team {

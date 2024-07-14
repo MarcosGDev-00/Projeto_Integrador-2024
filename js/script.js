@@ -192,6 +192,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initializeSteps();
 
+  var swiper = new Swiper('.slide-content', {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      950: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
   // document
   //   .getElementById('contactForm')
   //   .addEventListener('submit', function (event) {
@@ -278,6 +307,17 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileMenuToggle.innerHTML = '<i class="fas fa-times"></i>';
     } else {
       mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+  });
+
+  var swiper = new Swiper(".swiper-container", {
+    effect: "cube",
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
     }
   });
 });
