@@ -212,10 +212,10 @@ document.addEventListener('DOMContentLoaded', function () {
       0: {
         slidesPerView: 1,
       },
-      520: {
+      768: {
         slidesPerView: 2,
       },
-      950: {
+      1024: {
         slidesPerView: 3,
       },
     },

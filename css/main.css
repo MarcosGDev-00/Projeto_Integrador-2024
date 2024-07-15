@@ -1536,6 +1536,15 @@ div.redes_footer > div.icon i {
     height: 100%;
   }
 
+  div.text_process {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .swiper-container {
+    left: 0;
+  }
+
   div#progress-bar-container li .step-inner {
     display: none;
   }
@@ -1644,8 +1653,18 @@ div.redes_footer > div.icon i {
   }
 
   /* process */
-  div.img_process {
-    display: none;
+  div.process_sobre {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  div.text_process {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .swiper-container {
+    left: 0;
   }
 
   /* Contato */
