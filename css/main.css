@@ -286,6 +286,14 @@ body.dark-mode {
     box-shadow: 0 5px 40px var(--cor5);
   }
 
+  div.card {
+    background-color: var(--fundo2);
+  }
+
+  span.overlay::after {
+    background-color: var(--fundo2);
+  }
+
   div.container-team input,
   textarea {
     border: 1px solid var(--letra2);
